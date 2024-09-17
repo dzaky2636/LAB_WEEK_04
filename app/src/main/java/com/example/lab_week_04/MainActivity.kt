@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
                     as NavHostFragment
         val navController = navHostFragment.navController
-//Creating top level destinations
-//and adding them to the draw
+        //Creating top level destinations
+        //and adding them to the draw
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.listFragment, R.id.favoritesFragment, R.id.cafeFragment
@@ -26,9 +26,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         findViewById<NavigationView>(R.id.nav_view)
             ?.setupWithNavController(navController)
-// Added this part only
+        // Added this part only
         findViewById<BottomNavigationView>(R.id.bottom_nav)
             ?.setupWithNavController(navController)
+
     }
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
